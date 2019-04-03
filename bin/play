@@ -1,9 +1,7 @@
-describe './bin/play' do
-  it 'evokes #play passing it `board` as an argument' do
-    allow($stdout).to receive(:puts)
+require_relative "../lib/play"
 
-    expect(self).to receive(:play).with(kind_of(Array))
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
-    run_file("./bin/play")
-  end
-end
+puts "Welcome to Tic Tac Toe!"
+display_board(board)
+play(board)
